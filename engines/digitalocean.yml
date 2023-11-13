@@ -1,0 +1,5 @@
+---
+path: "digitalocean"
+type: "kv"
+options:
+  version: "2"

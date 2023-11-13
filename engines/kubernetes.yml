@@ -1,0 +1,5 @@
+---
+path: "kubernetes"
+type: "kv"
+options:
+  version: "2"

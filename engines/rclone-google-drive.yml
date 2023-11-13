@@ -1,0 +1,5 @@
+---
+path: "rclone-google-drive"
+type: "kv"
+options:
+  version: "2"
