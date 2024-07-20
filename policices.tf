@@ -3,6 +3,6 @@
 resource "vault_policy" "policies" {
   for_each = { for f in fileset("${path.module}/policies/", "*.hcl") : trimsuffix(f, ".hcl") => file("${path.module}/policies/${f}") }
 
-  name = each.key
+  name   = each.key
   policy = each.value
 }

@@ -8,7 +8,7 @@ locals {
 resource "vault_mount" "engines" {
   for_each = local.engines
 
-  path = each.key
-  type = each.value.type
+  path    = each.key
+  type    = each.value.type
   options = each.value.options
 }
