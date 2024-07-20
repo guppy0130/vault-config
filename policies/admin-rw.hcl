@@ -27,10 +27,6 @@ path "sys/policies/acl" {
 }
 
 path "sys/policies/acl/*" {
-  capabilities = ["list", "read"]
-}
-
-path "sys/mounts/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
 
@@ -38,6 +34,15 @@ path "sys/mounts" {
   capabilities = ["read", "list"]
 }
 
+path "sys/mounts/*" {
+  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
 path "sys/tools/*" {
   capabilities = ["read", "list", "update"]
+}
+
+# create limited child token
+path "auth/token/create" {
+  capabilities = ["update"]
 }
